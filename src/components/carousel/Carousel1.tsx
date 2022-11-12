@@ -70,7 +70,7 @@ const CarouselItem = (props: CarouselItemProps) => {
 
   return (
     <div onTouchStart={(e) => handleTouchStart(e)} onTouchMove={(e) => handleTouchMove(e)} className="w-full h-full overflow-hidden">
-      <div className="flex transition-all duration-200 ease-linear hidden-scrollbar" id="carousel-content" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
+      <div className="flex transition-all duration-200 ease-linear hidden-scrollbar" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
         {children}
       </div>
     </div>
