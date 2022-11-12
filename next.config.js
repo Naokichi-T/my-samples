@@ -4,7 +4,7 @@ const nextConfig = {
   swcMinify: true,
   eslint: { dirs: ["src"] },
   images: {
-    unoptimized: true,
+    domains: ["via.placeholder.com"],
   },
 };
 
