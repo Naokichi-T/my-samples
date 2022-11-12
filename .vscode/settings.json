@@ -1,6 +1,7 @@
 {
-  "cSpell.words": ["focusable", "textareas"],
-  "css.lint.vendorPrefix": "ignore", // -webkit-appearanceのwarningを無視
-  "css.lint.propertyIgnoredDueToDisplay": "ignore", //img,svg...のvertical-alignのwarningを無視
+  "cSpell.words": [],
+  "css.lint.unknownAtRules": "ignore",
   "svg.preview.background": "editor"
 }
+
+// // https://qiita.com/masakinihirota/items/bd8c07aa54efad307588
