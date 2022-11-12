@@ -1,4 +1,6 @@
 // https://dev.to/rakumairu/simple-react-carousel-24m0
+// https://medium.com/tinyso/how-to-create-the-responsive-and-swipeable-carousel-slider-component-in-react-99f433364aa0
+// https://reactjsexample.com/tag/carousel/
 
 import { Children, ReactNode, TouchEvent, useState } from "react";
 
@@ -6,7 +8,7 @@ type CarouselProps = {
   children: ReactNode;
 };
 
-export const Carousel = (props: CarouselProps) => {
+export const Carousel1 = (props: CarouselProps) => {
   const { children } = props;
   // https://blog.agney.dev/react-children-count/
   const length = Children.count(children);
@@ -25,9 +27,8 @@ export const Carousel = (props: CarouselProps) => {
   };
 
   return (
-    // idはメモ代わり
-    <div className="w-full flex flex-col" id="carousel-container">
-      <div className="relative w-full flex" id="carousel-wrapper">
+    <div className="w-full flex flex-col">
+      <div className="relative w-full flex">
         {currentIndex > 0 && <LeftArrowBtn prev={prev} />}
         <CarouselItem currentIndex={currentIndex} next={next} prev={prev}>
           {children}

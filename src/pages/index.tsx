@@ -1,4 +1,4 @@
-import { Carousel } from "components/Carousel";
+import { Carousel1 } from "components/carousel/Carousel1";
 import Head from "next/head";
 import Image from "next/image";
 
@@ -18,11 +18,11 @@ export default function Home() {
       </Head>
 
       <main className="max-w-[1200px] ml-auto mr-auto mt-16">
-        <Carousel>
+        <Carousel1>
           <Image loader={loader} priority={true} src="placeholder.png" alt="placeholder" width={1600} height={300} className="w-full flex-shrink-0 flex-grow" />
           <Image loader={loader} priority={true} src="placeholder.png" alt="placeholder" width={1600} height={300} className="w-full flex-shrink-0 flex-grow" />
           <Image loader={loader} priority={true} src="placeholder.png" alt="placeholder" width={1600} height={300} className="w-full flex-shrink-0 flex-grow" />
-        </Carousel>
+        </Carousel1>
       </main>
     </div>
   );
