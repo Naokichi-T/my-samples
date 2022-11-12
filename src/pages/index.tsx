@@ -9,7 +9,7 @@ export default function Home() {
       </Head>
 
       <main>
-        <h1>テスト</h1>
+        <h1 className="text-red-500">テスト</h1>
       </main>
     </div>
   );
