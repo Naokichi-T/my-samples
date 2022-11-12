@@ -1,17 +1,8 @@
+@import "./carousel1.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@layer components {
-  .arrowBtn {
-    @apply absolute z-10 top-1/2 -translate-y-1/2 w-12 h-12 rounded-3xl bg-white border border-solid border-gray-400;
-  }
-  @media (hover: none) and (pointer: coarse) {
-    .arrowBtn {
-      display: none;
-    }
-  }
-}
 
 @layer utilities {
   /* https://zenn.dev/nbr41to/articles/11efbc362a89ba */
@@ -23,3 +14,6 @@
     display: none; /* Chrome, Safari 対応 */
   }
 }
+
+/* How to Split CSS files */
+/* https://github.com/tailwindlabs/tailwindcss.com/issues/991 */
