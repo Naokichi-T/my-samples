@@ -1,0 +1,6 @@
+{
+  "cSpell.words": ["focusable", "textareas"],
+  "css.lint.vendorPrefix": "ignore", // -webkit-appearanceのwarningを無視
+  "css.lint.propertyIgnoredDueToDisplay": "ignore", //img,svg...のvertical-alignのwarningを無視
+  "svg.preview.background": "editor"
+}
