@@ -30,11 +30,11 @@ export default function Carousel() {
   };
 
   return (
-    <div>
+    <main>
       <h1>Carousel</h1>
 
-      <h2>タッチイベントのみ, 1つのカルーセルに1つのアイテムを表示</h2>
-      <div className="max-w-[1200px] ml-auto mr-auto mt-16">
+      <h2>タッチイベントのみ, ループなし, 1つのカルーセルに1つのアイテムを表示</h2>
+      <div className="max-w-[1200px] mt-2 ml-auto mr-auto">
         <Carousel1 {...carousel1Props}>
           {items.map((item) => (
             <Image key={item} loader={loader1} priority={true} src="placeholder.png" alt="placeholder" width={1600} height={300} className="w-full flex-shrink-0 flex-grow" />
@@ -42,8 +42,8 @@ export default function Carousel() {
         </Carousel1>
       </div>
 
-      <h2>タッチイベントのみ, 1つのカルーセルに複数のアイテムを表示</h2>
-      <div className="max-w-[1200px] ml-auto mr-auto mt-16">
+      <h2>タッチイベントのみ, ループなし, 1つのカルーセルに複数のアイテムを表示</h2>
+      <div className="max-w-[1200px] mt-2 ml-auto mr-auto">
         <Carousel2 {...carousel2Props}>
           {items.map((item) => (
             <div className="p-2" style={{ minWidth: `${100 / displayCount}%` }} key={item}>
@@ -52,6 +52,6 @@ export default function Carousel() {
           ))}
         </Carousel2>
       </div>
-    </div>
+    </main>
   );
 }

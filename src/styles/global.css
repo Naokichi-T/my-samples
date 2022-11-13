@@ -1,8 +1,20 @@
-@import "./carousel1.css";
+@import "./carousel.css";
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  main {
+    @apply p-8;
+  }
+  h1 {
+    @apply text-2xl;
+  }
+  h2 {
+    @apply mt-4 text-lg;
+  }
+}
 
 @layer utilities {
   /* https://zenn.dev/nbr41to/articles/11efbc362a89ba */

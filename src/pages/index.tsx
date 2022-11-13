@@ -9,7 +9,7 @@ export default function Home() {
         <meta name="description" content="Next.js sample components" />
       </Head>
 
-      <main className="p-8">
+      <main>
         <ul className="list-disc">
           <li>
             <Link href="/carousel">Carousel</Link>

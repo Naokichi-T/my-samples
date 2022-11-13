@@ -3,7 +3,7 @@
 // https://reactjsexample.com/tag/carousel/
 // https://codedamn.com/news/reactjs/top-react-js-carousel-components
 
-// タッチイベントのみ 1つのカルーセルに1つのアイテムを表示
+// タッチイベントのみ, ループなし, 1つのカルーセルに1つのアイテムを表示
 
 import { ReactNode, TouchEvent, useState } from "react";
 
@@ -94,7 +94,7 @@ const LeftArrowBtn = (props: LeftArrowBtnProps) => {
   const { prev } = props;
   return (
     <button onClick={prev} className="arrowBtn left-6">
-      &lt;
+      {"<"}
     </button>
   );
 };
@@ -107,7 +107,7 @@ const RightArrowBtn = (props: RightArrowBtnProps) => {
   const { next } = props;
   return (
     <button onClick={next} className="arrowBtn right-6">
-      &gt;
+      {">"}
     </button>
   );
 };
