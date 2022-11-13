@@ -1,22 +1,18 @@
-// https://dev.to/rakumairu/simple-react-carousel-24m0
-// https://medium.com/tinyso/how-to-create-the-responsive-and-swipeable-carousel-slider-component-in-react-99f433364aa0
-// https://reactjsexample.com/tag/carousel/
-// https://codedamn.com/news/reactjs/top-react-js-carousel-components
-
-// タッチイベントのみ 1つのカルーセルに1つのアイテムを表示
+// タッチイベントのみ 1つのカルーセルに複数のアイテムを表示
 
 import { ReactNode, TouchEvent, useState } from "react";
 
 type CarouselProps = {
   children: ReactNode;
   itemsCount: number;
+  displayCount: number;
 };
 
-export const Carousel1 = (props: CarouselProps) => {
-  const { children, itemsCount } = props;
+export const Carousel2 = (props: CarouselProps) => {
+  const { children, itemsCount, displayCount } = props;
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const canGoNext = currentIndex < itemsCount - 1;
+  const canGoNext = currentIndex < itemsCount - displayCount;
   const canGoPrev = currentIndex > 0;
 
   const next = () => {
@@ -32,6 +28,7 @@ export const Carousel1 = (props: CarouselProps) => {
   };
 
   const carouselItemProps = {
+    displayCount,
     currentIndex,
     next,
     prev,
@@ -50,13 +47,14 @@ export const Carousel1 = (props: CarouselProps) => {
 
 type CarouselItemProps = {
   children: ReactNode;
+  displayCount: number;
   currentIndex: number;
   next: () => void;
   prev: () => void;
 };
 
 const CarouselItem = (props: CarouselItemProps) => {
-  const { children, currentIndex, next, prev } = props;
+  const { children, displayCount, currentIndex, next, prev } = props;
   const [touchPosition, setTouchPosition] = useState(0);
 
   const handleTouchStart = (e: TouchEvent<HTMLDivElement>) => {
@@ -79,7 +77,7 @@ const CarouselItem = (props: CarouselItemProps) => {
 
   return (
     <div onTouchStart={(e) => handleTouchStart(e)} onTouchMove={(e) => handleTouchMove(e)} className="w-full h-full overflow-hidden">
-      <div className="flex transition-all duration-200 ease-linear hidden-scrollbar" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
+      <div className="flex transition-all duration-200 ease-linear hidden-scrollbar" style={{ transform: `translateX(-${currentIndex * (100 / displayCount)}%)` }}>
         {children}
       </div>
     </div>

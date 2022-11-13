@@ -1,3 +1,9 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": "next/core-web-vitals",
+  "rules": {
+    "@next/next/no-img-element": "off"
+  }
 }
+
+// img tagのwaringを無効化
+// https://blog.kimizuka.org/entry/2021/07/12/232646
