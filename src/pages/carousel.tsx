@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Carousel1 } from "components/carousel/Carousel1";
 import { Carousel2 } from "components/carousel/Carousel2";
+import { Carousel3, CarouselItem } from "components/carousel/Carousel3";
 
 // https://nextjs.org/docs/api-reference/next/image#loader
 // https://zenn.dev/catnose99/articles/883f7dbbe21632a5254e
@@ -33,8 +34,8 @@ export default function Carousel() {
     <main>
       <h1>Carousel</h1>
 
-      <h2>タッチイベントのみ, ループなし, 1つのカルーセルに1つのアイテムを表示</h2>
-      <div className="max-w-[1200px] mt-2 ml-auto mr-auto">
+      <h2>タッチイベント, マウスイベントなし, ループなし, 1つのカルーセルに1つのアイテムを表示</h2>
+      <div className="container">
         <Carousel1 {...carousel1Props}>
           {items.map((item) => (
             <Image key={item} loader={loader1} priority={true} src="placeholder.png" alt="placeholder" width={1600} height={300} className="w-full flex-shrink-0 flex-grow" />
@@ -42,8 +43,8 @@ export default function Carousel() {
         </Carousel1>
       </div>
 
-      <h2>タッチイベントのみ, ループなし, 1つのカルーセルに複数のアイテムを表示</h2>
-      <div className="max-w-[1200px] mt-2 ml-auto mr-auto">
+      <h2>タッチイベント, マウスイベントなし, ループなし, 1つのカルーセルに複数のアイテムを表示</h2>
+      <div className="container">
         <Carousel2 {...carousel2Props}>
           {items.map((item) => (
             <div className="p-2" style={{ minWidth: `${100 / displayCount}%` }} key={item}>
@@ -51,6 +52,18 @@ export default function Carousel() {
             </div>
           ))}
         </Carousel2>
+      </div>
+
+      <h2>タッチイベント, マウスイベントなし, ループあり, 1つのカルーセルに1つのアイテムを表示</h2>
+      <a href="https://bundlephobia.com/package/react-swipeable@7.0.0" target="_blank" rel="noreferrer noopener">
+        react-swipeable
+      </a>
+      <div className="container">
+        <Carousel3>
+          <CarouselItem>Item 1</CarouselItem>
+          <CarouselItem>Item 2</CarouselItem>
+          <CarouselItem>Item 3</CarouselItem>
+        </Carousel3>
       </div>
     </main>
   );

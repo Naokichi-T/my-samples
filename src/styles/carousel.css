@@ -1,4 +1,8 @@
 @layer components {
+  .container {
+    @apply max-w-6xl mt-2 ml-auto mr-auto;
+  }
+  /* Carousel1 & 2 */
   .arrowBtn {
     @apply absolute z-10 top-1/2 -translate-y-1/2 w-12 h-12 rounded-3xl bg-white border border-solid border-gray-400 text-black;
   }
@@ -7,5 +11,9 @@
     .arrowBtn {
       display: none;
     }
+  }
+  /* Carousel3 */
+  .carousel3Btn {
+    @apply m-1 px-1 border border-black bg-gray-200 font-mono;
   }
 }

@@ -1,9 +1,8 @@
 // https://dev.to/rakumairu/simple-react-carousel-24m0
-// https://medium.com/tinyso/how-to-create-the-responsive-and-swipeable-carousel-slider-component-in-react-99f433364aa0
 // https://reactjsexample.com/tag/carousel/
 // https://codedamn.com/news/reactjs/top-react-js-carousel-components
 
-// タッチイベントのみ, ループなし, 1つのカルーセルに1つのアイテムを表示
+// タッチイベント, マウスイベントなし, ループなし, 1つのカルーセルに1つのアイテムを表示
 
 import { ReactNode, TouchEvent, useState } from "react";
 
